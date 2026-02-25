@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Profesional | Reza Aswin Saputra</title>
+    <title>Reza Aswin Saputra | IT Support & Infrastructure Professional</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Base Styles & Clean Code Principles */
         :root {
-            --primary-color: #2c3e50;
-            --accent-color: #4CAF50;
-            --text-color: #333;
-            --bg-light: #f4f4f4;
+            --primary: #1a2a3a; /* Deep Blue Professional */
+            --accent: #27ae60;  /* Growth Green */
+            --bg-body: #f8fafc;
+            --text-dark: #2d3436;
+            --text-light: #636e72;
             --white: #ffffff;
-            --spacing: 20px;
+            --transition: all 0.3s ease;
         }
 
         * {
@@ -22,168 +23,265 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--white);
-            padding: var(--spacing);
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-dark);
+            line-height: 1.7;
         }
 
         .container {
-            max-width: 900px;
-            margin: auto;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
 
-        /* Responsive Header */
-        header {
-            border-bottom: 3px solid var(--accent-color);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
+        /* --- Profile Header --- */
+        .profile-header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 60px 30px;
+            border-radius: 15px;
             text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(26, 42, 58, 0.1);
         }
 
-        header h1 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .profile-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
         }
 
-        .subtitle {
+        .profile-header p.tagline {
             font-size: 1.2rem;
-            color: #666;
-            font-weight: 500;
+            opacity: 0.9;
+            margin-bottom: 25px;
         }
 
-        /* Sections */
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.1);
+            padding: 8px 15px;
+            border-radius: 50px;
+            transition: var(--transition);
+        }
+
+        .contact-link:hover {
+            background: var(--accent);
+        }
+
+        /* --- Sections --- */
         section {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
             margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
         }
 
         h2 {
-            color: var(--primary-color);
-            border-left: 5px solid var(--accent-color);
-            padding-left: 15px;
-            margin-bottom: 15px;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
-        /* Skills Grid - Responsive */
-        .skills-grid {
+        h2::after {
+            content: '';
+            flex-grow: 1;
+            height: 2px;
+            background: #eee;
+        }
+
+        /* --- Skills Grid --- */
+        .skills-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+
+        .skill-list {
             list-style: none;
         }
 
-        .skills-grid li {
-            background: var(--bg-light);
+        .skill-list li {
+            background: #f1f2f6;
+            margin-bottom: 8px;
             padding: 10px 15px;
-            border-radius: 4px;
-            font-weight: 500;
-            text-align: center;
-        }
-
-        /* Experience Cards */
-        .card {
-            background: var(--white);
-            border: 1px solid #ddd;
-            padding: 20px;
-            margin-bottom: 15px;
             border-radius: 8px;
-            transition: transform 0.2s;
+            font-size: 0.9rem;
+            border-left: 4px solid #dfe4ea;
         }
 
-        .card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        /* --- Experience Timeline --- */
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            border-left: 2px solid #eee;
+            margin-bottom: 40px;
         }
 
-        .card h3 {
-            color: var(--primary-color);
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            background: var(--accent);
+            border-radius: 50%;
+            border: 4px solid var(--white);
+        }
+
+        .job-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .company {
+            display: block;
+            color: var(--accent);
+            font-weight: 600;
             margin-bottom: 5px;
         }
 
-        .date {
-            display: block;
-            font-size: 0.9rem;
-            color: var(--accent-color);
-            margin-bottom: 10px;
-            font-weight: bold;
+        .duration {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
         }
 
-        ul.details {
-            padding-left: 20px;
+        .job-desc {
+            list-style-position: inside;
+            color: var(--text-light);
         }
 
-        /* Media Queries for Mobile Optimization */
-        @media (max-width: 600px) {
-            header h1 { font-size: 1.8rem; }
-            body { padding: 15px; }
-            h2 { font-size: 1.3rem; }
+        .job-desc li { margin-bottom: 8px; }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .profile-header h1 { font-size: 2rem; }
+            section { padding: 25px; }
+            .contact-info { flex-direction: column; align-items: center; }
         }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <header>
+        <header class="profile-header">
             <h1>Reza Aswin Saputra</h1>
-            <p class="subtitle">IT Support Professional & Field Engineer</p>
-            <p>Kabupaten Tangerang, Banten | 082277874188 | rezaswins@gmail.com</p>
+            <p class="tagline">IT Support Specialist & Technical Infrastructure Expert [cite: 6]</p>
+            <div class="contact-info">
+                <a href="mailto:rezaswins@gmail.com" class="contact-link"><i class="fas fa-envelope"></i> rezaswins@gmail.com [cite: 3]</a>
+                <a href="https://wa.me/6282277874188" class="contact-link"><i class="fab fa-whatsapp"></i> 082277874188 [cite: 4]</a>
+                <a href="https://linkedin.com/in/rezaswins" class="contact-link"><i class="fab fa-linkedin"></i> rezaswins [cite: 4]</a>
+            </div>
         </header>
 
         <section>
-            <h2>Profil Profesional</h2>
-            <p>Spesialis Dukungan TI dan Field Engineer yang berpengalaman dalam mengoptimalkan Fleet Management Systems (FMS) dan transformasi digital skala besar[cite: 6, 7]. Terbukti meningkatkan efisiensi operasional hingga 50% melalui deployment hardware/software yang canggih.</p>
+            <h2><i class="fas fa-user-tie"></i> Ringkasan Profesional</h2>
+            <p>Seorang profesional IT Support dan Field Engineer yang ahli dalam infrastruktur kritis dan transformasi digital skala besar[cite: 6]. Berpengalaman dalam optimasi Fleet Management Systems (FMS) dan pengelolaan siklus data kompleks[cite: 7]. Memiliki rekam jejak meningkatkan efisiensi operasional sebesar 50% melalui deployment hardware/software yang canggih[cite: 8].</p>
         </section>
 
         <section>
-            <h2>Keahlian Teknis</h2>
-            <ul class="skills-grid">
-                <li>Linux (Ubuntu/CentOS) [cite: 46]</li>
-                <li>MySQL & Active Directory [cite: 46]</li>
-                <li>Network Monitoring (NOC) [cite: 44]</li>
-                <li>Microsoft 365 Admin [cite: 46]</li>
-                <li>FMS & IoT Devices [cite: 48]</li>
-                <li>HTML/CSS (Web Statis)</li>
-            </ul>
+            <h2><i class="fas fa-tools"></i> Keahlian Teknis</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Infrastruktur & Jaringan [cite: 44]</h3>
+                    <ul class="skill-list">
+                        <li>TCP/IP, DNS/DHCP, VLAN Configuration [cite: 44]</li>
+                        <li>Network Monitoring (NOC) [cite: 44]</li>
+                        <li>MikroTik & Cisco Basics [cite: 44]</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Administrasi Sistem [cite: 46]</h3>
+                    <ul class="skill-list">
+                        <li>Linux (Ubuntu/CentOS) [cite: 46]</li>
+                        <li>MySQL & Windows Server [cite: 46]</li>
+                        <li>Active Directory & Microsoft 365 [cite: 46]</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Teknologi Lapangan [cite: 48]</h3>
+                    <ul class="skill-list">
+                        <li>Fleet Management Systems (FMS) [cite: 48]</li>
+                        <li>GPS Calibration & Telemetry Sensors [cite: 48]</li>
+                        <li>Ruggedized IoT Devices [cite: 48]</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section>
-            <h2>Pengalaman Kerja Utama</h2>
+            <h2><i class="fas fa-briefcase"></i> Pengalaman Kerja</h2>
             
-            <div class="card">
-                <h3>IT Field Engineer - PT. Leader IT Service Solutions</h3>
-                <span class="date">Maret 2025 - Desember 2025</span>
-                <ul class="details">
-                    <li>Instalasi dan kalibrasi sensor GPS/telemetri FMS dengan akurasi 99%.</li>
-                    <li>Pemeliharaan perangkat onboard guna mengurangi downtime sebesar 15%[cite: 14].</li>
+            <div class="timeline-item">
+                <span class="job-title">IT Field Engineer</span>
+                <span class="company">PT. Leader IT Service Solutions [cite: 10, 11]</span>
+                <span class="duration">Maret 2025 - Desember 2025 [cite: 12]</span>
+                <ul class="job-desc">
+                    <li>Instalasi dan konfigurasi perangkat keras/lunak FMS dengan akurasi 99% pada kalibrasi sensor GPS[cite: 13].</li>
+                    <li>Mengurangi downtime peralatan sebesar 15% melalui program pemeliharaan komprehensif[cite: 14].</li>
                 </ul>
             </div>
 
-            <div class="card">
-                <h3>Technical Team Coordinator - PT. Alamanda Reka Cipta</h3>
-                <span class="date">Agustus 2020 - Februari 2025</span>
-                <ul class="details">
-                    <li>Memimpin 25 personel lapangan untuk digitalisasi 500.000+ dokumen hukum[cite: 20, 23].</li>
-                    <li>Meningkatkan efisiensi pencarian data sebesar 50% bagi pemangku kepentingan pemerintah[cite: 22].</li>
+            <div class="timeline-item">
+                <span class="job-title">Technical Team Coordinator</span>
+                <span class="company">PT. Alamanda Reka Cipta [cite: 16, 17]</span>
+                <span class="duration">Agustus 2020 - Februari 2025 [cite: 18]</span>
+                <ul class="job-desc">
+                    <li>Memimpin transformasi digital skala nasional di 10 kantor regional[cite: 19].</li>
+                    <li>Mengelola digitalisasi 500.000+ dokumen hukum dengan standar "Zero Error"[cite: 20, 21].</li>
+                    <li>Memimpin dan membimbing 25 personel lapangan untuk melampaui kuota produksi harian.</li>
                 </ul>
             </div>
 
-            <div class="card">
-                <h3>Desktop Support Engineer - PT. Berca Hardayaperkasa</h3>
-                <span class="date">Januari 2018 - Desember 2019</span>
-                <ul class="details">
-                    <li>Menangani 200+ tiket dukungan teknis bulanan sesuai standar SLA[cite: 36].</li>
-                    <li>Menjaga uptime sistem sebesar 98% untuk 200+ aset komputasi korporat[cite: 33].</li>
+            <div class="timeline-item">
+                <span class="job-title">Desktop Support Engineer</span>
+                <span class="company">PT. Berca Hardayaperkasa [cite: 29, 30]</span>
+                <span class="duration">Januari 2018 - Desember 2019 [cite: 32]</span>
+                <ul class="job-desc">
+                    <li>Menjaga uptime sistem 98% melalui jadwal pemeliharaan preventif untuk 200+ aset korporat[cite: 33].</li>
+                    <li>Menyelesaikan 200+ tiket dukungan teknis setiap bulan sesuai standar SLA.</li>
                 </ul>
             </div>
         </section>
 
         <section>
-            <h2>Pendidikan</h2>
-            <p><strong>Teknik Informatika</strong> - Universitas Muhammadiyah Tangerang (Semester 5 Selesai) [cite: 38, 39, 40]</p>
+            <h2><i class="fas fa-graduation-cap"></i> Pendidikan</h2>
+            <div class="education-item">
+                <p><strong>Informatics Engineering (S1 - Semester 5 Selesai)</strong> [cite: 38, 40]</p>
+                <p style="color: var(--text-light);">Muhammadiyah University of Tangerang [cite: 39]</p>
+            </div>
         </section>
     </div>
+
 </body>
 </html>
