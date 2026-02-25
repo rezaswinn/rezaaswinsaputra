@@ -7,67 +7,87 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { background-color: #0f172a; color: #f8fafc; font-family: sans-serif; }
-        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: #f8fafc; }
+        .glass-card { background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px); }
     </style>
 </head>
 <body class="p-6 md:p-12">
-    <div class="max-w-4xl mx-auto space-y-8">
-        <header class="glass rounded-3xl p-8 text-center">
-            <h1 class="text-4xl font-extrabold mb-2 text-white">REZA ASWIN SAPUTRA</h1>
-            <p class="text-sky-400 font-bold text-xl uppercase tracking-widest">IT Infrastructure & Field Engineer</p>
-            <div class="mt-4 flex flex-wrap justify-center gap-4 text-sm opacity-80">
-                <span><i class="fas fa-envelope mr-2"></i>rezaswins@gmail.com</span>
-                <span><i class="fas fa-phone mr-2"></i>082277874188</span>
-                <span><i class="fas fa-map-marker-alt mr-2"></i>Tangerang, Banten</span>
+    <div class="max-w-4xl mx-auto space-y-10">
+        
+        <header class="glass-card rounded-3xl p-8 text-center space-y-4">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">REZA ASWIN SAPUTRA</h1>
+            <p class="text-sky-400 font-bold text-lg md:text-xl tracking-widest uppercase">IT Infrastructure & Field Engineer</p>
+            <div class="flex flex-wrap justify-center gap-6 text-sm opacity-80 pt-2">
+                <span><i class="fas fa-envelope text-sky-400 mr-2"></i>rezaswins@gmail.com</span>
+                <span><i class="fas fa-phone text-sky-400 mr-2"></i>082277874188</span>
+                <span><i class="fas fa-map-marker-alt text-sky-400 mr-2"></i>Tangerang, Banten</span>
             </div>
         </header>
 
+        <section class="glass-card rounded-3xl p-8">
+            <h2 class="text-xl font-bold mb-4 text-sky-400 flex items-center gap-3">
+                <span class="w-2 h-6 bg-sky-500 rounded-full"></span> RINGKASAN PROFESIONAL
+            </h2>
+            <p class="text-slate-300 leading-relaxed">
+                [cite_start]Spesialis IT Support dan Field Engineer dengan pengalaman dalam infrastruktur kritis dan transformasi digital skala besar[cite: 6]. [cite_start]Berhasil meningkatkan efisiensi operasional sebesar 50% melalui deployment sistem Linux & MySQL serta protokol validasi data di sektor pertambangan[cite: 8].
+            </p>
+        </section>
+
         <section class="space-y-6">
-            <h2 class="text-2xl font-bold border-l-4 border-sky-500 pl-4">EXPERIENCE</h2>
+            <h2 class="text-xl font-bold text-sky-400 flex items-center gap-3">
+                <span class="w-2 h-6 bg-sky-500 rounded-full"></span> PENGALAMAN KERJA
+            </h2>
             
-            <div class="glass rounded-2xl p-6">
-                <div class="flex justify-between items-start mb-2">
-                    <h3 class="text-xl font-bold">IT Field Engineer</h3>
-                    <span class="text-sky-400 text-sm font-bold">2025</span>
+            <div class="glass-card rounded-2xl p-6 border-l-4 border-sky-500">
+                <div class="flex flex-col md:flex-row justify-between mb-4">
+                    <div>
+                        <h3 class="text-lg font-bold text-white">IT Field Engineer</h3>
+                        <p class="text-sky-400 font-semibold text-sm">PT. [cite_start]LEADER IT SERVICE SOLUTIONS [cite: 10]</p>
+                    </div>
+                    [cite_start]<span class="text-xs font-bold text-slate-500 mt-1">MARET 2025 - DES 2025 [cite: 12]</span>
                 </div>
-                <p class="text-slate-400 font-semibold mb-3">PT. LEADER IT SERVICE SOLUTIONS</p>
-                <ul class="text-slate-300 text-sm list-disc ml-5 space-y-1">
-                    [cite_start]<li>Instalasi FMS di KPC Bengalon dengan akurasi GPS 99%[cite: 13].</li>
-                    [cite_start]<li>Mengurangi downtime peralatan sebesar 15% melalui pemeliharaan preventif[cite: 14].</li>
+                <ul class="text-slate-400 text-sm space-y-2 list-none">
+                    [cite_start]<li class="flex gap-2"><i class="fas fa-caret-right text-sky-500 mt-1"></i> Instalasi FMS di KPC Bengalon dengan akurasi GPS 99%[cite: 13].</li>
+                    [cite_start]<li class="flex gap-2"><i class="fas fa-caret-right text-sky-500 mt-1"></i> Mengurangi downtime peralatan sebesar 15% melalui pemeliharaan preventif[cite: 14].</li>
                 </ul>
             </div>
 
-            <div class="glass rounded-2xl p-6">
-                <div class="flex justify-between items-start mb-2">
-                    <h3 class="text-xl font-bold">Technical Team Coordinator</h3>
-                    <span class="text-sky-400 text-sm font-bold">2020 - 2025</span>
+            <div class="glass-card rounded-2xl p-6 border-l-4 border-indigo-500">
+                <div class="flex flex-col md:flex-row justify-between mb-4">
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Technical Team Coordinator</h3>
+                        <p class="text-indigo-400 font-semibold text-sm">PT. [cite_start]ALAMANDA REKA CIPTA [cite: 16]</p>
+                    </div>
+                    [cite_start]<span class="text-xs font-bold text-slate-500 mt-1">AGUSTUS 2020 - FEB 2025 [cite: 18]</span>
                 </div>
-                <p class="text-slate-400 font-semibold mb-3">PT. ALAMANDA REKA CIPTA</p>
-                <ul class="text-slate-300 text-sm list-disc ml-5 space-y-1">
-                    [cite_start]<li>Memimpin digitalisasi 500.000+ dokumen hukum dengan standar Zero Error[cite: 20, 21].</li>
-                    [cite_start]<li>Meningkatkan efisiensi pencarian data sebesar 50%[cite: 22].</li>
-                    [cite_start]<li>Membimbing 25 personel lapangan untuk melampaui kuota harian[cite: 23].</li>
+                <ul class="text-slate-400 text-sm space-y-2 list-none">
+                    [cite_start]<li class="flex gap-2"><i class="fas fa-caret-right text-indigo-500 mt-1"></i> Memimpin digitalisasi 500.000+ dokumen hukum dengan standar Zero Error[cite: 20, 21].</li>
+                    [cite_start]<li class="flex gap-2"><i class="fas fa-caret-right text-indigo-500 mt-1"></i> Mengelola tim berisi 25 personel lapangan[cite: 23].</li>
                 </ul>
             </div>
         </section>
 
         <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="glass rounded-2xl p-6">
-                <h2 class="text-xl font-bold mb-4 text-sky-400">TECHNICAL SKILLS</h2>
+            <div class="glass-card rounded-2xl p-6">
+                <h2 class="text-lg font-bold mb-4 text-sky-400 uppercase tracking-wider">Technical Skills</h2>
                 <div class="flex flex-wrap gap-2">
-                    [cite_start]<span class="bg-slate-800 px-3 py-1 rounded text-xs">Linux (Ubuntu/CentOS) [cite: 46]</span>
-                    [cite_start]<span class="bg-slate-800 px-3 py-1 rounded text-xs">MySQL [cite: 46]</span>
-                    [cite_start]<span class="bg-slate-800 px-3 py-1 rounded text-xs">Active Directory [cite: 46]</span>
-                    [cite_start]<span class="bg-slate-800 px-3 py-1 rounded text-xs">FMS & Telemetry [cite: 48]</span>
+                    [cite_start]<span class="bg-slate-800/80 px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-700">Linux (Ubuntu/CentOS) [cite: 46]</span>
+                    [cite_start]<span class="bg-slate-800/80 px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-700">MySQL [cite: 46]</span>
+                    [cite_start]<span class="bg-slate-800/80 px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-700">Active Directory [cite: 46]</span>
+                    [cite_start]<span class="bg-slate-800/80 px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-700">Fleet Management System [cite: 48]</span>
                 </div>
             </div>
-            <div class="glass rounded-2xl p-6 flex flex-col justify-center text-center">
-                <h2 class="text-xl font-bold mb-2">PENDIDIKAN</h2>
-                [cite_start]<p class="text-slate-300">Informatics Engineering [cite: 38]</p>
-                [cite_start]<p class="text-sm text-slate-500">Muhammadiyah University of Tangerang [cite: 39]</p>
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-center items-center text-center">
+                <h2 class="text-lg font-bold mb-2 text-sky-400 uppercase tracking-wider">Pendidikan</h2>
+                [cite_start]<p class="text-white font-bold">Informatics Engineering [cite: 38]</p>
+                [cite_start]<p class="text-xs text-slate-500">Muhammadiyah University of Tangerang [cite: 39]</p>
             </div>
         </section>
+
+        <footer class="text-center text-slate-600 text-[10px] uppercase tracking-[0.2em] pb-10">
+            Professional Portfolio © 2026
+        </footer>
     </div>
 </body>
 </html>
