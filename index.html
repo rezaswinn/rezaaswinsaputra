@@ -3,106 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio | Reza Aswin Saputra</title>
+    <title>Reza Aswin Saputra | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: #f8fafc; }
-        .glass-card { background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px); }
-        .accent-gradient { background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        body { font-family: 'Inter', sans-serif; background-color: #fafafa; color: #1a1a1a; }
+        .section-title { @apply text-xs font-bold uppercase tracking-widest text-gray-400 mb-8; }
+        .nav-link { @apply hover:text-black transition-colors duration-300; }
     </style>
 </head>
-<body class="p-6 md:p-12">
-    <div class="max-w-4xl mx-auto space-y-10">
+<body class="antialiased">
+
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center text-sm font-medium text-gray-500">
+            <a href="#" class="text-black font-bold">RAS.</a>
+            <div class="space-x-8">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="mailto:rezaswins@gmail.com" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 pt-32 pb-24">
         
-        <header class="glass-card rounded-3xl p-8 text-center space-y-4">
-            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white uppercase">REZA ASWIN SAPUTRA</h1>
-            <p class="accent-gradient font-bold text-lg md:text-xl tracking-widest uppercase">IT Infrastructure & Field Engineer</p>
-            <div class="flex flex-wrap justify-center gap-6 text-sm opacity-80 pt-2">
-                <span><i class="fas fa-envelope text-sky-400 mr-2"></i>rezaswins@gmail.com</span>
-                <span><i class="fas fa-phone text-sky-400 mr-2"></i>082277874188</span>
-                <span><i class="fas fa-map-marker-alt text-sky-400 mr-2"></i>Tangerang, Banten</span>
-            </div>
-        </header>
-
-        <section class="glass-card rounded-3xl p-8">
-            <h2 class="text-xl font-bold mb-4 text-sky-400 flex items-center gap-3">
-                <span class="w-2 h-6 bg-sky-500 rounded-full"></span> RINGKASAN PROFESIONAL
-            </h2>
-            <p class="text-slate-300 leading-relaxed">
-                Profesional IT Support dan Field Engineer yang ahli dalam infrastruktur kritis dan transformasi digital skala besar. Berhasil meningkatkan efisiensi operasional sebesar 50% melalui deployment hardware/software canggih serta dukungan sistem berbasis Linux dan MySQL di sektor pertambangan dan pemerintahan.
+        <section id="about" class="mb-24">
+            <h1 class="text-5xl font-bold tracking-tight mb-6">Reza Aswin Saputra [cite: 1]</h1>
+            <p class="text-xl text-gray-600 leading-relaxed max-w-2xl">
+                Accomplished IT Support professional and Field Engineer specializing in critical infrastructure and large-scale digital transformation. [cite: 6]
             </p>
+            <div class="mt-8 flex gap-4 text-sm font-medium">
+                <span class="px-3 py-1 bg-gray-100 rounded-full text-gray-600">📍 Tangerang, Indonesia [cite: 2]</span>
+                <a href="https://linkedin.com/in/rezaswins" class="text-blue-600 hover:underline">LinkedIn [cite: 4]</a>
+            </div>
         </section>
 
-        <section class="space-y-6">
-            <h2 class="text-xl font-bold text-sky-400 flex items-center gap-3">
-                <span class="w-2 h-6 bg-sky-500 rounded-full"></span> PENGALAMAN KERJA
-            </h2>
+        <section id="experience" class="mb-24">
+            <h2 class="section-title">Professional Experience</h2>
             
-            <div class="glass-card rounded-2xl p-6 border-l-4 border-sky-500">
-                <div class="flex flex-col md:flex-row justify-between mb-4">
-                    <div>
-                        <h3 class="text-lg font-bold text-white">IT Field Engineer</h3>
-                        <p class="text-sky-400 font-semibold text-sm">PT. LEADER IT SERVICE SOLUTIONS</p>
+            <div class="space-y-16">
+                <div class="group grid md:grid-cols-4 gap-4">
+                    <header class="text-sm text-gray-400 font-medium">2025 — Present [cite: 12]</header>
+                    <div class="md:col-span-3">
+                        <h3 class="text-lg font-bold group-hover:text-blue-600 transition-colors">IT Field Engineer · PT. Leader IT Service Solutions [cite: 10, 11]</h3>
+                        <p class="text-gray-600 mt-2 leading-relaxed">Executed complex installation of FMS hardware achieving 99% accuracy in GPS calibration at District KPC Bengalon.  Orchestrated maintenance for mission-critical onboard devices, reducing downtime by 15%. [cite: 14]</p>
+                        <div class="flex flex-wrap gap-2 mt-4 text-xs font-mono">
+                            <span class="bg-gray-100 px-2 py-1 rounded">FMS</span>
+                            <span class="bg-gray-100 px-2 py-1 rounded">Telemetry</span>
+                            <span class="bg-gray-100 px-2 py-1 rounded">Troubleshooting</span>
+                        </div>
                     </div>
-                    <span class="text-xs font-bold text-slate-500 mt-1 uppercase">Maret 2025 - Desember 2025</span>
                 </div>
-                <ul class="text-slate-400 text-sm space-y-2">
-                    <li class="flex gap-2"><i class="fas fa-check text-sky-500 mt-1"></i> Instalasi FMS di District KPC Bengalon dengan akurasi GPS 99%.</li>
-                    <li class="flex gap-2"><i class="fas fa-check text-sky-500 mt-1"></i> Mengurangi downtime peralatan sebesar 15% melalui pemeliharaan preventif pada monitor onboard.</li>
-                </ul>
-            </div>
 
-            <div class="glass-card rounded-2xl p-6 border-l-4 border-indigo-500">
-                <div class="flex flex-col md:flex-row justify-between mb-4">
-                    <div>
-                        <h3 class="text-lg font-bold text-white">Technical Team Coordinator</h3>
-                        <p class="text-indigo-400 font-semibold text-sm">PT. ALAMANDA REKA CIPTA</p>
+                <div class="group grid md:grid-cols-4 gap-4">
+                    <header class="text-sm text-gray-400 font-medium">2020 — 2025 [cite: 18]</header>
+                    <div class="md:col-span-3">
+                        <h3 class="text-lg font-bold group-hover:text-blue-600 transition-colors">Technical Team Coordinator · PT. Alamanda Reka Cipta [cite: 16, 17]</h3>
+                        <p class="text-gray-600 mt-2 leading-relaxed">Spearheaded national-scale digital transformation across 10 regional offices. [cite: 19] Managed digitization of 500,000+ legal documents with zero disruption.  Led and mentored 25 field personnel. [cite: 23]</p>
                     </div>
-                    <span class="text-xs font-bold text-slate-500 mt-1 uppercase">Agustus 2020 - Februari 2025</span>
                 </div>
-                <ul class="text-slate-400 text-sm space-y-2">
-                    <li class="flex gap-2"><i class="fas fa-check text-indigo-500 mt-1"></i> Memimpin digitalisasi 500.000+ dokumen hukum dengan standar kualitas tinggi.</li>
-                    <li class="flex gap-2"><i class="fas fa-check text-indigo-500 mt-1"></i> Mengelola dan membimbing tim lapangan yang terdiri dari 25 personel.</li>
-                </ul>
-            </div>
 
-            <div class="glass-card rounded-2xl p-6 border-l-4 border-slate-500">
-                <div class="flex flex-col md:flex-row justify-between mb-4">
-                    <div>
-                        <h3 class="text-lg font-bold text-white">Desktop Support Engineer</h3>
-                        <p class="text-slate-400 font-semibold text-sm">PT. BERCA HARDAYAPERKASA (District Indo Bontang)</p>
+                <div class="group grid md:grid-cols-4 gap-4">
+                    <header class="text-sm text-gray-400 font-medium">2020 [cite: 26]</header>
+                    <div class="md:col-span-3">
+                        <h3 class="text-lg font-bold group-hover:text-blue-600 transition-colors">NOC Administrator · PT. Smartfren Telecom Tbk [cite: 24, 25]</h3>
+                        <p class="text-gray-600 mt-2 leading-relaxed">Monitored core network infrastructure and Linux-based servers to ensure 99% service availability. [cite: 27] Utilized MySQL to optimize overall network stability. [cite: 28]</p>
                     </div>
-                    <span class="text-xs font-bold text-slate-500 mt-1 uppercase">Januari 2018 - Desember 2019</span>
                 </div>
-                <ul class="text-slate-400 text-sm space-y-2">
-                    <li class="flex gap-2"><i class="fas fa-check text-slate-400 mt-1"></i> Menangani lebih dari 200 tiket dukungan teknis setiap bulan sesuai standar SLA.</li>
-                    <li class="flex gap-2"><i class="fas fa-check text-slate-400 mt-1"></i> Menjaga uptime sistem sebesar 98% untuk 200+ aset korporat.</li>
-                </ul>
             </div>
         </section>
 
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="glass-card rounded-2xl p-6">
-                <h2 class="text-lg font-bold mb-4 text-sky-400 uppercase tracking-wider">Keahlian Teknis</h2>
-                <div class="flex flex-wrap gap-2 text-xs font-bold text-slate-200">
-                    <span class="bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">Linux (Ubuntu/CentOS)</span>
-                    <span class="bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">MySQL</span>
-                    <span class="bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">Active Directory</span>
-                    <span class="bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">Fleet Management System</span>
+        <section id="skills" class="mb-24">
+            <h2 class="section-title">Technical Expertise</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="font-bold text-sm mb-3">Infrastructure [cite: 44]</h4>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>TCP/IP & DNS/DHCP [cite: 44]</li>
+                        <li>VLAN Config [cite: 44]</li>
+                        <li>NOC Monitoring [cite: 44]</li>
+                    </ul>
                 </div>
-            </div>
-            <div class="glass-card rounded-2xl p-6 flex flex-col justify-center items-center text-center">
-                <h2 class="text-lg font-bold mb-2 text-sky-400 uppercase tracking-wider">Pendidikan</h2>
-                <p class="text-white font-bold text-sm">Informatics Engineering</p>
-                <p class="text-[10px] text-slate-500">Muhammadiyah University of Tangerang</p>
+                <div>
+                    <h4 class="font-bold text-sm mb-3">Systems [cite: 46]</h4>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>Linux (Ubuntu/CentOS) [cite: 46]</li>
+                        <li>MySQL [cite: 46]</li>
+                        <li>Active Directory [cite: 46]</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm mb-3">Field Tech [cite: 48]</h4>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>FMS & GPS [cite: 48]</li>
+                        <li>Telemetry Sensors [cite: 48]</li>
+                        <li>IoT Devices [cite: 48]</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm mb-3">Operations [cite: 47]</h4>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>Digitization [cite: 47]</li>
+                        <li>Data Validation [cite: 47]</li>
+                        <li>Digital Archiving [cite: 47]</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
-        <footer class="text-center text-slate-600 text-[10px] uppercase tracking-[0.2em] pb-10">
-            Professional Portfolio © 2026 | Reza Aswin Saputra
+        <footer class="pt-12 border-t border-gray-100 text-sm text-gray-400">
+            <p>© 2026 Reza Aswin Saputra. Built with precision for digital transformation. [cite: 6]</p>
         </footer>
-    </div>
+
+    </main>
+
 </body>
 </html>
