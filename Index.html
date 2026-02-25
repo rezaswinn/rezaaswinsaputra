@@ -3,40 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Saya</title>
+    <title>Portofolio Profesional | Reza Aswin Saputra</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: auto; padding: 20px; }
-        header { border-bottom: 2px solid #4CAF50; padding-bottom: 10px; }
-        .card { background: #f4f4f4; padding: 15px; margin: 10px 0; border-radius: 5px; }
-        h2 { color: #2c3e50; }
+        /* Base Styles & Clean Code Principles */
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #4CAF50;
+            --text-color: #333;
+            --bg-light: #f4f4f4;
+            --white: #ffffff;
+            --spacing: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+            padding: var(--spacing);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        /* Responsive Header */
+        header {
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            font-weight: 500;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        /* Skills Grid - Responsive */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            list-style: none;
+        }
+
+        .skills-grid li {
+            background: var(--bg-light);
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        /* Experience Cards */
+        .card {
+            background: var(--white);
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .date {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        ul.details {
+            padding-left: 20px;
+        }
+
+        /* Media Queries for Mobile Optimization */
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            body { padding: 15px; }
+            h2 { font-size: 1.3rem; }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>[Nama Anda]</h1>
-        <p>Digital Operations & Tech Enthusiast</p>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Reza Aswin Saputra</h1>
+            <p class="subtitle">IT Support Professional & Field Engineer</p>
+            <p>Kabupaten Tangerang, Banten | 082277874188 | rezaswins@gmail.com</p>
+        </header>
 
-    <section>
-        <h2>Tentang Saya</h2>
-        <p>Saya spesialis yang berfokus pada efisiensi kerja menggunakan sistem Linux dan alat digital modern.</p>
-    </section>
+        <section>
+            <h2>Profil Profesional</h2>
+            <p>Spesialis Dukungan TI dan Field Engineer yang berpengalaman dalam mengoptimalkan Fleet Management Systems (FMS) dan transformasi digital skala besar[cite: 6, 7]. Terbukti meningkatkan efisiensi operasional hingga 50% melalui deployment hardware/software yang canggih.</p>
+        </section>
 
-    <section>
-        <h2>Keahlian</h2>
-        <ul>
-            <li>Manajemen Sistem Linux (Mint)</li>
-            <li>Pengolahan Data Digital</li>
-            <li>Pembuatan Website Statis (HTML/CSS)</li>
-        </ul>
-    </section>
+        <section>
+            <h2>Keahlian Teknis</h2>
+            <ul class="skills-grid">
+                <li>Linux (Ubuntu/CentOS) [cite: 46]</li>
+                <li>MySQL & Active Directory [cite: 46]</li>
+                <li>Network Monitoring (NOC) [cite: 44]</li>
+                <li>Microsoft 365 Admin [cite: 46]</li>
+                <li>FMS & IoT Devices [cite: 48]</li>
+                <li>HTML/CSS (Web Statis)</li>
+            </ul>
+        </section>
 
-    <section>
-        <h2>Proyek Simulasi</h2>
-        <div class="card">
-            <h3>Analisis Efisiensi Bisnis</h3>
-            <p>Menganalisis proses bisnis UMKM dan memberikan solusi digital sederhana.</p>
-        </div>
-    </section>
+        <section>
+            <h2>Pengalaman Kerja Utama</h2>
+            
+            <div class="card">
+                <h3>IT Field Engineer - PT. Leader IT Service Solutions</h3>
+                <span class="date">Maret 2025 - Desember 2025</span>
+                <ul class="details">
+                    <li>Instalasi dan kalibrasi sensor GPS/telemetri FMS dengan akurasi 99%.</li>
+                    <li>Pemeliharaan perangkat onboard guna mengurangi downtime sebesar 15%[cite: 14].</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Technical Team Coordinator - PT. Alamanda Reka Cipta</h3>
+                <span class="date">Agustus 2020 - Februari 2025</span>
+                <ul class="details">
+                    <li>Memimpin 25 personel lapangan untuk digitalisasi 500.000+ dokumen hukum[cite: 20, 23].</li>
+                    <li>Meningkatkan efisiensi pencarian data sebesar 50% bagi pemangku kepentingan pemerintah[cite: 22].</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Desktop Support Engineer - PT. Berca Hardayaperkasa</h3>
+                <span class="date">Januari 2018 - Desember 2019</span>
+                <ul class="details">
+                    <li>Menangani 200+ tiket dukungan teknis bulanan sesuai standar SLA[cite: 36].</li>
+                    <li>Menjaga uptime sistem sebesar 98% untuk 200+ aset komputasi korporat[cite: 33].</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Pendidikan</h2>
+            <p><strong>Teknik Informatika</strong> - Universitas Muhammadiyah Tangerang (Semester 5 Selesai) [cite: 38, 39, 40]</p>
+        </section>
+    </div>
 </body>
 </html>
