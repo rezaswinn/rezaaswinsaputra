@@ -16,6 +16,7 @@
         <meta name="twitter:title" content="Reza Aswin Saputra — Portfolio">
         <meta name="twitter:description" content="IT Support & Field Engineer — FMS, telemetry, NOC, data operations.">
         <meta name="theme-color" content="#030303">
+        <link rel="icon" href="favicon.ico">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" onload="this.rel='stylesheet'">
@@ -95,7 +96,7 @@
 
         /* ========== NAVIGATION ========== */
         nav {
-            position: fixed;
+            position: sticky;
             top: 0; left: 0; right: 0;
             padding: 1.5rem 2.5rem;
             display: flex;
@@ -403,6 +404,36 @@
             color: var(--text);
         }
 
+        /* ========== HERO DOWNLOAD BUTTON ========== */
+        .hero-cta {
+            margin-top: 1.8rem;
+        }
+        .btn-download {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            background: var(--accent);
+            color: var(--bg);
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        .btn-download:hover { background: #c43c16; }
+        /* ========== CONTACT CTA ========== */
+        .contact-cta { color: var(--text-dim); margin-bottom: 1rem; }
+        /* ========== SKILL TAGS ========== */
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+        .skill-tag {
+            background: var(--accent);
+            color: var(--bg);
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+        }
+
         /* ========== SECTION STYLES ========== */
         .section {
             padding: 3.5rem 1.5rem;
@@ -708,6 +739,10 @@
                     <div class="hero-evidence-stat">8+ Years</div>
                 </div>
             </div>
+
+            <div class="hero-cta reveal reveal-delay-4">
+                <a href="resume.pdf" class="btn-download" download>Download Resume / CV</a>
+            </div>
         </div>
     </section>
 
@@ -726,9 +761,9 @@
                 </div>
             </div>
             <ul class="exp-bullets">
-                <li>Executed complex FMS hardware installation with 99% accuracy in GPS/telemetry calibration</li>
-                <li>Reduced equipment downtime by 15% through comprehensive maintenance programs</li>
-                <li>Ensured 100% seamless real-time data synchronization between field assets and command center</li>
+                <li>Spearheaded complex FMS hardware deployments, achieving 99% accuracy in GPS and telemetry calibration for heavy-duty fleets.</li>
+                <li>Reduced equipment downtime by 15% through comprehensive preventative maintenance programs.</li>
+                <li>Ensured 100% seamless real-time data synchronization between field assets and command center.</li>
             </ul>
         </div>
 
@@ -743,11 +778,9 @@
                 </div>
             </div>
             <ul class="exp-bullets">
-                <li>Led national-scale digital transformation across 10 regional offices</li>
-                <li>Digitized 500k+ legal documents with zero downtime</li>
-                <li>Implemented multi-tier verification to ensure consistent data quality</li>
-                <li>Improved data retrieval speed by 50% via systematic archiving</li>
-                <li>Mentored 25 field staff, raising team performance</li>
+                <li>Orchestrated a nationwide digital transformation across 10 regional offices, successfully digitizing over 500,000 legal assets with zero system interruption.</li>
+                <li>Optimized data retrieval workflows, resulting in a 50% increase in operational efficiency through systematic archiving and multi-tier QA.</li>
+                <li>Mentored 25 field staff, raising team performance.</li>
             </ul>
         </div>
 
@@ -762,7 +795,7 @@
                 </div>
             </div>
             <ul class="exp-bullets">
-                <li>Maintained 99% service availability through proactive network monitoring</li>
+                <li>Ensured 99.9% network uptime by implementing proactive monitoring protocols and resolving infrastructure bottlenecks through deep log analysis.</li>
                 <li>Optimized network stability using MySQL-based log analysis</li>
                 <li>Identified and resolved system bottlenecks across infrastructure</li>
             </ul>
@@ -789,7 +822,7 @@
     <!-- ABOUT SECTION -->
     <section id="about" class="section reveal reveal-delay-2">
         <h2>About Me</h2>
-        <p>IT Support &amp; Field Engineer with 8+ years delivering reliable infrastructure and field systems. I design, deploy, and maintain Fleet Management and telemetry solutions that cut downtime and improve data accuracy.</p>
+        <p>A results-driven IT Field Engineer with over 8 years of experience in deploying mission-critical infrastructure. I specialize in Fleet Management Systems (FMS) and high-precision telemetry, consistently delivering solutions that minimize operational downtime and maximize data integrity for large-scale industrial assets.</p>
 
         <div class="subsection">
             <h3>Highlights</h3>
@@ -798,6 +831,18 @@
                 <li class="skill-item"><strong>Field Systems:</strong> FMS, GPS calibration, telemetry integrations for large mining fleets</li>
                 <li class="skill-item"><strong>Team Leadership:</strong> Coordinated &amp; trained field teams for national deployments</li>
             </ul>
+        </div>
+
+        <div class="subsection">
+            <h3>Technical Skills</h3>
+            <div class="skill-tags">
+                <span class="skill-tag">Fleet Management Systems (FMS)</span>
+                <span class="skill-tag">Telemetry &amp; GPS</span>
+                <span class="skill-tag">Network Monitoring</span>
+                <span class="skill-tag">Data Digitization</span>
+                <span class="skill-tag">MySQL &amp; Log Analysis</span>
+                <span class="skill-tag">Team Leadership</span>
+            </div>
         </div>
 
         <div class="subsection">
@@ -815,21 +860,21 @@
         <p style="color:var(--text-dim);margin-bottom:0.75rem;">Small selection of field and systems work.</p>
         <div class="projects-grid">
             <figure class="project-card">
-                <a href="#" aria-label="FMS Deployment details">
-                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&h=675&q=80" alt="FMS installation & telemetry validation" loading="lazy">
-                    <figcaption>FMS installation & telemetry validation</figcaption>
+                <a href="#" aria-label="End-to-End FMS Deployment and Telemetry Validation">
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&h=675&q=80" alt="End-to-End FMS Deployment & Telemetry Validation for Mining Fleets" loading="lazy">
+                    <figcaption>End-to-End FMS Deployment & Telemetry Validation for Mining Fleets</figcaption>
                 </a>
             </figure>
             <figure class="project-card">
-                <a href="#" aria-label="Data Digitization details">
-                    <img src="https://images.pexels.com/photos/220326/pexels-photo-220326.jpeg?auto=compress&cs=tinysrgb&w=1200&h=675" alt="Digitization pipeline & QA processes" loading="lazy">
-                    <figcaption>Digitization pipeline & QA processes</figcaption>
+                <a href="#" aria-label="Large-Scale Enterprise Document Digitization and Workflow Automation">
+                    <img src="https://images.pexels.com/photos/220326/pexels-photo-220326.jpeg?auto=compress&cs=tinysrgb&w=1200&h=675" alt="Large-Scale Enterprise Document Digitization & Workflow Automation" loading="lazy">
+                    <figcaption>Large-Scale Enterprise Document Digitization & Workflow Automation</figcaption>
                 </a>
             </figure>
             <figure class="project-card">
-                <a href="#" aria-label="NOC Optimization details">
-                    <img src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1200&h=675" alt="NOC monitoring & availability improvements" loading="lazy">
-                    <figcaption>NOC monitoring & availability improvements</figcaption>
+                <a href="#" aria-label="NOC Monitoring and Availability Optimization">
+                    <img src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1200&h=675" alt="NOC Monitoring & Availability Optimization" loading="lazy">
+                    <figcaption>NOC Monitoring & Availability Optimization</figcaption>
                 </a>
             </figure>
         </div>
@@ -838,6 +883,7 @@
     <!-- CONTACT SECTION -->
     <section id="contact" class="section reveal reveal-delay-3">
         <h2>Get in Touch</h2>
+        <p class="contact-cta">Open for professional collaborations and technical leadership roles. Let's discuss how I can streamline your IT operations.</p>
         <div class="contact-item">
             <div class="contact-item-tag">Email</div>
             <div class="contact-item-value"><a href="mailto:rezaswins@gmail.com">rezaswins@gmail.com</a></div>
