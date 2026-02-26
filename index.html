@@ -569,6 +569,20 @@
             color: var(--text-dim);
         }
 
+        .project-card a { color: inherit; text-decoration: none; display:block; }
+        .project-card:hover { transform: translateY(-4px); box-shadow: 0 6px 18px rgba(0,0,0,0.6); transition: all 0.25s ease; }
+        .project-card img { background:#070707; }
+
+        @media (max-width: 1024px) {
+            .projects-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 600px) {
+            .projects-grid { grid-template-columns: 1fr; }
+            .hero { min-height: 60vh; }
+            .hero-line-small { margin-top: 1rem; }
+        }
+
         .contact-item a {
             color: var(--accent);
             text-decoration: none;
@@ -626,6 +640,8 @@
     <div class="glow"></div>
     <div class="grain"></div>
 
+    <a class="skip-link" href="#main" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
+
     <!-- NAVIGATION -->
     <nav id="nav">
         <a href="#" class="logo">
@@ -640,6 +656,7 @@
     </nav>
 
     <!-- HERO SECTION -->
+    <main id="main">
     <section class="hero" id="hero">
         <div class="hero-ring"></div>
         <div class="hero-ring"></div>
@@ -775,35 +792,25 @@
     <!-- PROJECTS SECTION -->
     <section id="projects" class="section reveal reveal-delay-3">
         <h2>Selected Projects</h2>
-        <p style="color:var(--text-dim);margin-bottom:0.75rem;">Small selection of field and systems work — screenshots are responsive placeholders.</p>
+        <p style="color:var(--text-dim);margin-bottom:0.75rem;">Small selection of field and systems work.</p>
         <div class="projects-grid">
             <figure class="project-card">
-                <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Project 1 placeholder">
-                    <rect width="100%" height="100%" fill="#0b0b0b" />
-                    <g fill="none" stroke="#2a2a2a" stroke-width="1">
-                        <path d="M20 180 C120 120 280 120 380 180" opacity="0.2" />
-                    </g>
-                    <text x="50%" y="50%" fill="#666" font-family="Space Mono, monospace" font-size="18" text-anchor="middle" dominant-baseline="middle">Project — FMS Deployment</text>
-                </svg>
-                <figcaption>FMS installation & telemetry validation</figcaption>
+                <a href="#" aria-label="FMS Deployment details">
+                    <img src="https://picsum.photos/id/1011/1200/675" srcset="https://picsum.photos/id/1011/400/225 400w, https://picsum.photos/id/1011/800/450 800w, https://picsum.photos/id/1011/1200/675 1200w" sizes="(max-width:600px) 100vw, (max-width:1024px) 48vw, 32vw" alt="FMS deployment screenshot" loading="lazy">
+                    <figcaption>FMS installation & telemetry validation</figcaption>
+                </a>
             </figure>
             <figure class="project-card">
-                <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Project 2 placeholder">
-                    <rect width="100%" height="100%" fill="#0b0b0b" />
-                    <circle cx="80" cy="60" r="36" fill="#111" stroke="#2a2a2a" />
-                    <text x="50%" y="50%" fill="#666" font-family="Space Mono, monospace" font-size="18" text-anchor="middle" dominant-baseline="middle">Data Digitization</text>
-                </svg>
-                <figcaption>Digitization pipeline & QA processes</figcaption>
+                <a href="#" aria-label="Data Digitization details">
+                    <img src="https://picsum.photos/id/1015/1200/675" srcset="https://picsum.photos/id/1015/400/225 400w, https://picsum.photos/id/1015/800/450 800w, https://picsum.photos/id/1015/1200/675 1200w" sizes="(max-width:600px) 100vw, (max-width:1024px) 48vw, 32vw" alt="Data digitization workflow" loading="lazy">
+                    <figcaption>Digitization pipeline & QA processes</figcaption>
+                </a>
             </figure>
             <figure class="project-card">
-                <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Project 3 placeholder">
-                    <rect width="100%" height="100%" fill="#0b0b0b" />
-                    <g stroke="#2a2a2a" stroke-width="1">
-                        <rect x="20" y="30" width="360" height="140" fill="none" />
-                    </g>
-                    <text x="50%" y="50%" fill="#666" font-family="Space Mono, monospace" font-size="18" text-anchor="middle" dominant-baseline="middle">NOC Optimization</text>
-                </svg>
-                <figcaption>NOC monitoring & availability improvements</figcaption>
+                <a href="#" aria-label="NOC Optimization details">
+                    <img src="https://picsum.photos/id/1003/1200/675" srcset="https://picsum.photos/id/1003/400/225 400w, https://picsum.photos/id/1003/800/450 800w, https://picsum.photos/id/1003/1200/675 1200w" sizes="(max-width:600px) 100vw, (max-width:1024px) 48vw, 32vw" alt="NOC monitoring dashboard" loading="lazy">
+                    <figcaption>NOC monitoring & availability improvements</figcaption>
+                </a>
             </figure>
         </div>
     </section>
@@ -823,30 +830,50 @@
 
     <!-- JAVASCRIPT -->
     <script>
-        // Navigation scroll effect
+        // Navigation scroll effect (optimized with rAF)
         const nav = document.getElementById('nav');
+        let ticking = false;
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 40) nav.classList.add('scrolled');
-            else nav.classList.remove('scrolled');
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    if (window.scrollY > 40) nav.classList.add('scrolled');
+                    else nav.classList.remove('scrolled');
+                    ticking = false;
+                });
+                ticking = true;
+            }
         });
 
-        // Reveal on scroll using Intersection Observer
+        // Reveal on scroll using Intersection Observer (unobserve when visible)
         const reveals = document.querySelectorAll('.reveal');
-        const observer = new IntersectionObserver(entries => {
+        const observer = new IntersectionObserver((entries, obs) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    obs.unobserve(entry.target);
+                }
             });
         }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
         reveals.forEach(el => observer.observe(el));
 
         // Smooth anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
+        const anchorLinks = document.querySelectorAll('a[href^="#"]');
+        anchorLinks.forEach(a => {
             a.addEventListener('click', e => {
-                e.preventDefault();
-                const target = document.querySelector(a.getAttribute('href'));
-                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                const href = a.getAttribute('href');
+                if (href === '#') return;
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             });
         });
+
+        // Accessibility: reveal skip-link on focus
+        const skip = document.querySelector('.skip-link');
+        skip.addEventListener('focus', () => { skip.style.left = '12px'; skip.style.width = 'auto'; skip.style.height = 'auto'; skip.style.overflow = 'visible'; });
+        skip.addEventListener('blur', () => { skip.style.left = '-999px'; skip.style.width = '1px'; skip.style.height = '1px'; skip.style.overflow = 'hidden'; });
     </script>
 </body>
 </html>
