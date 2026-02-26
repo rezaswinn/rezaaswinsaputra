@@ -534,8 +534,28 @@
 
         /* ========== CONTACT SECTION ========== */
         .contact-item {
-            margin: 0.9rem 0;
+            margin: 1.2rem 0;
             font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .contact-item-tag {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            background: rgba(233, 78, 27, 0.12);
+            border: 1px solid rgba(233, 78, 27, 0.3);
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            color: var(--accent);
+            white-space: nowrap;
+        }
+
+        .contact-item-value {
+            flex: 1;
         }
 
         /* ========== PROJECTS GRID ========== */
@@ -796,19 +816,19 @@
         <div class="projects-grid">
             <figure class="project-card">
                 <a href="#" aria-label="FMS Deployment details">
-                    <img src="https://picsum.photos/id/1011/1200/675" srcset="https://picsum.photos/id/1011/400/225 400w, https://picsum.photos/id/1011/800/450 800w, https://picsum.photos/id/1011/1200/675 1200w" sizes="(max-width:600px) 100vw, (max-width:1024px) 48vw, 32vw" alt="FMS deployment screenshot" loading="lazy">
+                    <img src="https://www.istockphoto.com/id/foto/insinyur-memeriksa-peralatan-listrik-atap-gm2233859693-649324203?w=1200&h=675&crop=smart" alt="FMS installation & telemetry validation" loading="lazy">
                     <figcaption>FMS installation & telemetry validation</figcaption>
                 </a>
             </figure>
             <figure class="project-card">
                 <a href="#" aria-label="Data Digitization details">
-                    <img src="https://picsum.photos/id/1015/1200/675" srcset="https://picsum.photos/id/1015/400/225 400w, https://picsum.photos/id/1015/800/450 800w, https://picsum.photos/id/1015/1200/675 1200w" sizes="(max-width:600px) 100vw, (max-width:1024px) 48vw, 32vw" alt="Data digitization workflow" loading="lazy">
+                    <img src="https://www.pexels.com/id-id/foto/tangga-kayu-coklat-di-rak-buku-kayu-coklat-220326/" alt="Digitization pipeline & QA processes" loading="lazy">
                     <figcaption>Digitization pipeline & QA processes</figcaption>
                 </a>
             </figure>
             <figure class="project-card">
                 <a href="#" aria-label="NOC Optimization details">
-                    <img src="https://picsum.photos/id/1003/1200/675" srcset="https://picsum.photos/id/1003/400/225 400w, https://picsum.photos/id/1003/800/450 800w, https://picsum.photos/id/1003/1200/675 1200w" sizes="(max-width:600px) 100vw, (max-width:1024px) 48vw, 32vw" alt="NOC monitoring dashboard" loading="lazy">
+                    <img src="https://www.pexels.com/id-id/foto/fotografi-selang-waktu-cahaya-biru-373543/" alt="NOC monitoring & availability improvements" loading="lazy">
                     <figcaption>NOC monitoring & availability improvements</figcaption>
                 </a>
             </figure>
@@ -818,15 +838,25 @@
     <!-- CONTACT SECTION -->
     <section id="contact" class="section reveal reveal-delay-3">
         <h2>Get in Touch</h2>
-        <div class="contact-item">Email: <a href="mailto:rezaswins@gmail.com">rezaswins@gmail.com</a></div>
-        <div class="contact-item">Phone: <a href="tel:+6282277874188">+62 822 7787 4188</a></div>
-        <div class="contact-item">LinkedIn: <a href="https://www.linkedin.com/in/rezaswins" target="_blank" rel="noopener">in/rezaswins</a></div>
+        <div class="contact-item">
+            <div class="contact-item-tag">Email</div>
+            <div class="contact-item-value"><a href="mailto:rezaswins@gmail.com">rezaswins@gmail.com</a></div>
+        </div>
+        <div class="contact-item">
+            <div class="contact-item-tag">Phone</div>
+            <div class="contact-item-value"><a href="tel:+6282277874188">+62 822 7787 4188</a></div>
+        </div>
+        <div class="contact-item">
+            <div class="contact-item-tag">LinkedIn</div>
+            <div class="contact-item-value"><a href="https://www.linkedin.com/in/rezaswins" target="_blank" rel="noopener">in/rezaswins</a></div>
+        </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="footer">
         &copy; 2026 Reza Aswin Saputra • Tangerang, Banten, Indonesia
     </footer>
+    </main>
 
     <!-- JAVASCRIPT -->
     <script>
